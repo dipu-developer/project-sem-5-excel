@@ -1,0 +1,46 @@
+function doGet() {
+  var content = getSheetData();
+  var contentObject = {GoogleSheetData: content}
+  return ContentService.createTextOutput(JSON.stringify(contentObject) ).setMimeType(ContentService.MimeType.JSON); 
+}
+
+function getSheetData()  { 
+  var ss= SpreadsheetApp.getActiveSpreadsheet();
+  var dataSheet = ss.getSheetByName('Sheet1'); 
+  var dataRange = dataSheet.getDataRange();
+  var dataValues = dataRange.getValues();  
+  return dataValues;
+}
+
+============== contact form code ========================================
+let sheet = SpreadsheetApp.openByUrl("https://docs.google.com/spreadsheets/d/1IkX-Q9cNZlcTxAIQJ84dTWyw9HQkLsibWD_1LRF4eiM/edit#gid=0")
+let sheetName = sheet.getSheetByName('Sheet1');
+function doPost(e){
+  let data = e.parameter;
+  sheetName.appendRow([data.name,data.email,data.mobnumber,data.photo]);
+  return ContentService.createTextOutput('Data Save Sucessfully')
+}
+============== contact form code ========================================
+
+
+contact link |||
+https://script.google.com/macros/s/AKfycbwKo7F9SqX2yDy-m7ucofHHnVITzMQF5BngSprjc8AJRJ8vyPQflk5iX6gCk4lOA_vw/exec
+
+about link ||||
+https://script.google.com/macros/s/AKfycby1r1ydtpMUOzQsMhij0nxPjOegW5ANNVcGS6Me1TFnRezNus-J4Ls1ZOj_ispMn7nAtA/exec
+
+teacher link ||||
+https://script.google.com/macros/s/AKfycbwT8icQiXENQ6DLTiOeLQs9BaPnIROmEmjWygI9luJLEnAVoI3XA2FanpcmZ27uwnRaIw/exec
+
+course link ||||
+https://script.google.com/macros/s/AKfycbykl9k_UklFw3ZTB3BF-4NWN95G_EGNN80BbRs8LpnoNDbzzJlI3_iI8knYWKCdhuzEhw/exec
+
+contact Form ||||
+https://script.google.com/macros/s/AKfycbxuUkZiDp92nzTMlKZIKe7eLERmPADIXNBPxojEqAE9scjYt_DTqAa9S3vturY6HPPs/exec
+
+Announcement ||||
+https://script.google.com/macros/s/AKfycbzprDoOBcQ50wTatXSPp-PW3GRD5G4jdazJItT4tisrq-7vkwFmPq453uH2C1cPFbXU/exec
+
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14987.246691330385!2d72.7342775!3d20.1001579!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7298fa6f369df%3A0x68573edb16695fce!2sN.B.%20Mehta%20Science%20And%20Commerce%20College!5e0!3m2!1sen!2sin!4v1700907869597!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
